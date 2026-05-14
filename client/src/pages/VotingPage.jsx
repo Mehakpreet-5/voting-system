@@ -39,7 +39,7 @@ const VotingPage = () => {
         if (!userId) return;
 
         const res = await fetch(
-          `http://localhost:5000/api/auth/userdata/${userId}`
+          `https://voting-system-6zk3.onrender.com/api/auth/userdata/${userId}`
         );
 
         const data = await res.json();
@@ -138,7 +138,7 @@ const VotingPage = () => {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/submit",
+        "https://voting-system-6zk3.onrender.com/api/submit",
         {
           method: "POST",
           headers: {

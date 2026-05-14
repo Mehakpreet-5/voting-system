@@ -8,7 +8,8 @@ const [current,setCurrent] = useState(0)
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/api/news")
+// fetch("http://localhost:5000/api/news")
+fetch("https://voting-system-6zk3.onrender.com/api/news")
 .then(res=>res.json())
 .then(data=>setNews(data))
 

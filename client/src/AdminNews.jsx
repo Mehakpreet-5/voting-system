@@ -11,7 +11,7 @@ const [editingId,setEditingId] = useState(null)
 // load news
 useEffect(()=>{
 
-fetch("http://localhost:5000/api/news")
+fetch("https://voting-system-6zk3.onrender.com/api/news")
 .then(res=>res.json())
 .then(data=>setNews(data))
 
@@ -24,7 +24,7 @@ const addNews = async ()=>{
 
 if(!title || !message) return alert("Fill all fields")
 
-const res = await fetch("http://localhost:5000/api/news",{
+const res = await fetch("https://voting-system-6zk3.onrender.com/api/news",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -53,7 +53,7 @@ alert("News posted but no emails sent")
 // update news
 const updateNews = async ()=>{
 
-await fetch(`http://localhost:5000/api/news/${editingId}`,{
+await fetch(`https://voting-system-6zk3.onrender.com/api/news/${editingId}`,{
 method:"PUT",
 headers:{
 "Content-Type":"application/json"
@@ -70,7 +70,7 @@ window.location.reload()
 // delete news
 const deleteNews = async(id)=>{
 
-await fetch(`http://localhost:5000/api/news/${id}`,{
+await fetch(`https://voting-system-6zk3.onrender.com/api/news/${id}`,{
 method:"DELETE"
 })
 

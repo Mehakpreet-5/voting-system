@@ -16,8 +16,8 @@ const [loading,setLoading] = useState(true)
 useEffect(()=>{
 
 Promise.all([
-fetch("http://localhost:5000/api/votes").then(res=>res.json()),
-fetch("http://localhost:5000/api/candidates").then(res=>res.json())
+fetch("https://voting-system-6zk3.onrender.com/api/votes").then(res=>res.json()),
+fetch("https://voting-system-6zk3.onrender.com/api/candidates").then(res=>res.json())
 ])
 .then(([votesData,candidateData])=>{
 setVotes(votesData)

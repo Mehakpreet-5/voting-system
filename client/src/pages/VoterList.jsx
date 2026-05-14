@@ -17,7 +17,7 @@ const VoterList = () => {
 
       try {
 
-        const res = await fetch("http://localhost:5000/api/votes");
+        const res = await fetch("https://voting-system-6zk3.onrender.com/api/votes");
         const data = await res.json();
 
         setVoters(data);
